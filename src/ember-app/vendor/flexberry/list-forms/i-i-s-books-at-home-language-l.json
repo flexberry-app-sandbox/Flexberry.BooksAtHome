@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-books-at-home-language-e",
+  "editForm": "i-i-s-books-at-home-language-e",
+  "external": false,
+  "caption": "Language",
+  "name": "IISBooksAtHomeLanguageL",
+  "className": "LanguageL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-books-at-home-language",
+      "modelProjection": "LanguageL"
+    }
+  ]
+}

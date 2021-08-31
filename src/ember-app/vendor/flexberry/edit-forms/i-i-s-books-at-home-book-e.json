@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Author",
+      "projection": "AuthorL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Language",
+      "projection": "LanguageL",
+      "detailModelName": null
+    },
+    {
+      "master": "tagType",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "Tags.TagType",
+      "projection": "TagTypeL",
+      "detailModelName": "i-i-s-books-at-home-tag"
+    }
+  ],
+  "external": false,
+  "caption": "Book",
+  "name": "IISBooksAtHomeBookE",
+  "className": "BookE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-books-at-home-book",
+      "modelProjection": "BookE"
+    }
+  ]
+}

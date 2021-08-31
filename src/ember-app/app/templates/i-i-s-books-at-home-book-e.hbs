@@ -1,0 +1,115 @@
+<h3 class="ui header">{{t "forms.i-i-s-books-at-home-book-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.name
+      class=(if (v-get validationObject "name" "isInvalid") "error")
+      label=(t "forms.i-i-s-books-at-home-book-e.name-caption")
+      data-test-i-i-s-books-at-home-book-e-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "name" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.year
+      class=(if (v-get validationObject "year" "isInvalid") "error")
+      label=(t "forms.i-i-s-books-at-home-book-e.year-caption")
+      data-test-i-i-s-books-at-home-book-e-year=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "year" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-books-at-home-book-e.dateOfBuy-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
+      readonly=readonly
+      value=model.dateOfBuy
+      class=(if (v-get validationObject "dateOfBuy" "isInvalid") "error")
+      data-test-i-i-s-books-at-home-book-e-dateOfBuy=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "dateOfBuy" "message")}}
+  </div>
+
+  <div class="field">
+    <label>{{t "forms.i-i-s-books-at-home-book-e.author-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.author
+      class=(if (v-get validationObject "author" "isInvalid") "error")
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="author"
+      projection="AuthorL"
+      title=(t "forms.i-i-s-books-at-home-book-e.author-caption")
+      readonly=readonly
+      componentName="authorLookup"
+      class=(if (v-get validationObject "author" "isInvalid") "error")
+      data-test-i-i-s-books-at-home-book-e-author=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "author" "message")}}
+  </div>
+
+  <div class="field">
+    <label>{{t "forms.i-i-s-books-at-home-book-e.language-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.language
+      class=(if (v-get validationObject "language" "isInvalid") "error")
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="language"
+      projection="LanguageL"
+      title=(t "forms.i-i-s-books-at-home-book-e.language-caption")
+      readonly=readonly
+      componentName="languageLookup"
+      class=(if (v-get validationObject "language" "isInvalid") "error")
+      data-test-i-i-s-books-at-home-book-e-language=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "language" "message")}}
+  </div>
+
+  <div class="field">
+    <label>{{t "forms.i-i-s-books-at-home-book-e.tags-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="tagsGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.tags
+      content=model.tags
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationObject "tags" "isInvalid") "error")
+      data-test-i-i-s-books-at-home-book-e-tags=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "tags" "message")}}
+  </div>
+</form>

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-books-at-home-author-e",
+  "editForm": "i-i-s-books-at-home-author-e",
+  "external": false,
+  "caption": "Author",
+  "name": "IISBooksAtHomeAuthorL",
+  "className": "AuthorL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-books-at-home-author",
+      "modelProjection": "AuthorL"
+    }
+  ]
+}

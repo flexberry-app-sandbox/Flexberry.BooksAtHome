@@ -1,0 +1,211 @@
+﻿{
+  "name": "IISBooksAtHomeBook",
+  "modelName": "i-i-s-books-at-home-book",
+  "className": "Book",
+  "nameSpace": "IIS.BooksAtHome",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "year",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "dateOfBuy",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "author",
+      "relatedTo": "i-i-s-books-at-home-author",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "language",
+      "relatedTo": "i-i-s-books-at-home-language",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "tags",
+      "relatedTo": "i-i-s-books-at-home-tag",
+      "inverse": "book"
+    }
+  ],
+  "projections": [
+    {
+      "name": "BookE",
+      "modelName": "i-i-s-books-at-home-book",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "year",
+          "caption": "Year",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "dateOfBuy",
+          "caption": "Date of buy",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Author",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Author",
+          "name": "author",
+          "relatedTo": "i-i-s-books-at-home-author",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Language",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Language",
+          "name": "language",
+          "relatedTo": "i-i-s-books-at-home-language",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "TagE",
+          "caption": "Tags",
+          "name": "tags",
+          "relatedTo": "i-i-s-books-at-home-tag",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "BookL",
+      "modelName": "i-i-s-books-at-home-book",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "year",
+          "caption": "Year",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "dateOfBuy",
+          "caption": "Date of buy",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Author",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Name",
+          "name": "author",
+          "relatedTo": "i-i-s-books-at-home-author",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Language",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Name",
+          "name": "language",
+          "relatedTo": "i-i-s-books-at-home-language",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

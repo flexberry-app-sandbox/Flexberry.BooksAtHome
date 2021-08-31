@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Tag type",
+  "name": "IISBooksAtHomeTagTypeE",
+  "className": "TagTypeE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-books-at-home-tag-type",
+      "modelProjection": "TagTypeE"
+    }
+  ]
+}

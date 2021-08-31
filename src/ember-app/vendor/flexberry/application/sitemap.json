@@ -1,0 +1,43 @@
+﻿{
+  "applicationCaption": "Books at home",
+  "applicationTitle": "Books at home",
+  "items": [
+    {
+      "link": null,
+      "menuName": "books-at-home",
+      "caption": "BooksAtHome",
+      "title": "BooksAtHome",
+      "children": [
+        {
+          "link": "i-i-s-books-at-home-tag-type-l",
+          "menuName": null,
+          "caption": "Tag type",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-books-at-home-book-l",
+          "menuName": null,
+          "caption": "Books",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-books-at-home-language-l",
+          "menuName": null,
+          "caption": "Language",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-books-at-home-author-l",
+          "menuName": null,
+          "caption": "Author",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

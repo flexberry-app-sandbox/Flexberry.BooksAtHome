@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-books-at-home-tag-type-e",
+  "editForm": "i-i-s-books-at-home-tag-type-e",
+  "external": false,
+  "caption": "Tag type",
+  "name": "IISBooksAtHomeTagTypeL",
+  "className": "TagTypeL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-books-at-home-tag-type",
+      "modelProjection": "TagTypeL"
+    }
+  ]
+}

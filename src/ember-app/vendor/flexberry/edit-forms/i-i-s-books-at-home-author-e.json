@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Author",
+  "name": "IISBooksAtHomeAuthorE",
+  "className": "AuthorE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-books-at-home-author",
+      "modelProjection": "AuthorE"
+    }
+  ]
+}
